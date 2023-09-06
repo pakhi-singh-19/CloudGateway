@@ -1,0 +1,13 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: ecommerce-application
+          uri: http://ecommerce-application-service
+          predicates:
+            - Path=/**
