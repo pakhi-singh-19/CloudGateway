@@ -5,7 +5,7 @@ node {
 
     stage('checkout') {
         checkout([$class: 'GitSCM',
-            branches: [[name: '*/master']],
+            branches: [[name: '*/main']],
             extensions: [],
             userRemoteConfigs: [[credentialsId: 'pakhi-singh-19', url: 'https://github.com/pakhi-singh-19/CloudGateway.git']]])
     }
